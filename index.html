@@ -1,17 +1,116 @@
-<!DOCTYPE html><html lang="pt-br">
-<head>  
-        <title>Meu projeto</title>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xadrez para Iniciantes — Peças como Pessoas</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-    <body>  
-        <h1>Meu projeto pessoal</h1>
-        <h2>Uma breve introdução</h2>
-        <p>Este é um projeto que visa...</p>
-        <img src="imagem.jpg" alt="Descrição da imagem">
-        <ul>
-            <li>Característica 1</li>
-            <li>Característica 2</li>
-            
-            <li>Característica 3</li>
-        </ul>
-    </body>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <h1 class="logo">Xadrez Humanizado</h1>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#pecas">Peças</a>
+        <a href="#dicas">Dicas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Aprenda xadrez com histórias: as peças são pessoas</h2>
+        <p>Interaja com o tabuleiro, clique numa peça e descubra quem ela é, como se move e dicas práticas para iniciantes.</p>
+      </div>
+    </section>
+
+    <section id="tabuleiro" class="container section board-section">
+      <div class="board-wrapper">
+        <div id="board" class="board" aria-label="Tabuleiro de xadrez"></div>
+        <aside class="sidepanel">
+          <h3>Modo de Aprendizado</h3>
+          <label class="toggle">
+            <input id="learnMode" type="checkbox" checked />
+            <span>Mostrar dicas e movimentos</span>
+          </label>
+
+          <div id="persona" class="persona">
+            <h4>Clique numa peça</h4>
+            <p>Ao clicar você verá quem ela "é" e dicas de uso.</p>
+          </div>!doctype html>
+
+          <div class="tips">
+            <h4>Dica Rápida</h4>
+            <ul>
+              <li>Mova suas peças para controlar o centro (d4, e4, d5, e5).</li>
+              <li>Desenvolva cavalos e bispos antes da dama.</li>
+              <li>Proteja seu rei: faça roque cedo.</li>
+              <li>Não mova a mesma peça várias vezes na abertura.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="pecas" class="container section">
+      <h3>Peças como Pessoas</h3>
+      <p>Cada peça tem uma “personalidade” para facilitar a memorização:</p>
+      <div class="personas-grid">
+        <div class="persona-card">
+          <div class="emoji">♟️</div>
+          <h4>Peão — O Aprendiz</h4>
+          <p>Avança devagar, mas juntos podem mudar o jogo. Use para controlar o centro e abrir caminho.</p>
+        </div>
+        <div class="persona-card">
+          <div class="emoji">♞</div>
+          <h4>Cavalo — O Saltador</h4>
+          <p>Gosta de surpresas — pula sobre os outros. Excelente para ataques de forquilha.</p>
+        </div>
+        <div class="persona-card">
+          <div class="emoji">♜</div>
+          <h4>Torres — Os Construtores</h4>
+          <p>Fortes em linhas retas. Funcionam melhor em colunas abertas e na 7ª fila do adversário.</p>
+        </div>
+        <div class="persona-card">
+          <div class="emoji">♝</div>
+          <h4>Bispos — Os Estrategistas</h4>
+          <p>Percorrem diagonais longas. Coordene-os com peças dos mesmos quadrados de cor.</p>
+        </div>
+        <div class="persona-card">
+          <div class="emoji">♛</div>
+          <h4>Dama — A General</h4>
+          <p>Extremamente versátil, mas não a traga cedo demais sem proteção.</p>
+        </div>
+        <div class="persona-card">
+          <div class="emoji">♚</div>
+          <h4>Rei — O Rei</h4>
+          <p>Vulnerável no centro no início — faça roque para deixá-lo mais seguro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dicas" class="container section">
+      <h3>Dicas Detalhadas para Iniciantes</h3>
+      <ol class="detailed-tips">
+        <li>Controle o centro com peões e peças leves (cavalos e bispos).</li>
+        <li>Desenvolva peças antes de mover a dama; evite muitas jogadas de peão.</li>
+        <li>Faça o roque (curto ou longo) para proteger seu rei e conectar torres.</li>
+        <li>Observe ameaças: sempre veja o movimento do oponente antes de mover.</li>
+        <li>Troque peças quando você estiver à frente no desenvolvimento ou material.</li>
+      </ol>
+      <p>Quer mais exercícios práticos? Peça: "Gerar mini-tática" e eu crio um quebra-cabeça.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="ano"></span> Xadrez Humanizado — Feito para iniciantes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
 </html>
